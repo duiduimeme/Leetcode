@@ -4,7 +4,9 @@ import java.util.Set;
 
 public class leetcode146 {
 
-
+    /*
+    * 146、实现一个LRU缓存
+    * */
 
     LinkedHashMap<Integer, Integer> cache;
     int capacity;
