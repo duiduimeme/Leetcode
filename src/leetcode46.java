@@ -4,6 +4,7 @@ import java.util.List;
 public class leetcode46 {
     /*
     * 给定一个 没有重复 数字的序列，返回其所有可能的全排列。
+    * 详细过程在我的csdnblog：https://blog.csdn.net/Lizejin961019/article/details/107120614
     * */
     static List<List<Integer>> res = new ArrayList<>();
     public static List<List<Integer>> permute(int[] nums) {
