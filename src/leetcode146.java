@@ -6,6 +6,7 @@ public class leetcode146 {
 
     /*
     * 146、实现一个LRU缓存
+    * 详细解答：https://blog.csdn.net/Lizejin961019/article/details/106248834
     * */
 
     LinkedHashMap<Integer, Integer> cache;
