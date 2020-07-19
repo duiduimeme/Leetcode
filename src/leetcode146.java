@@ -20,11 +20,9 @@ public class leetcode146 {
 
     public int get(int key) {
         if (!cache.containsKey(key)) return -1;
-
         int val = cache.get(key);
         cache.remove(key); // 从链表中删除
         cache.put(key, val); // 添加到链尾
-
         return val;
 
     }
