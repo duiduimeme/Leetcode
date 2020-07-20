@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class leetocde95 {
+public class leetcode95 {
     public class TreeNode {
       int val;
       TreeNode left;
