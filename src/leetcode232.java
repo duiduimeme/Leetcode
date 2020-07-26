@@ -4,31 +4,39 @@ import java.util.Stack;
 
 public class leetcode232 {
 
-    Queue<Integer> queue;
-    public leetcode232() {
-        queue = new LinkedList<>();
+        Stack<Integer> s1;
+        Stack<Integer> s2;
+        public leetcode232() {
+            s1 = new Stack<>();
+            s2 = new Stack<>();
+        }
 
-    }
+        public void push(int x) {
+            s1.push(x);
+        }
 
-    /** Push element x to the back of queue. */
-    public void push(int x) {
-        queue.add(x);
-        for(int i=0;i<queue.size();i++)
-            queue.add(queue.poll());
-    }
+        /** Removes the element from in front of queue and returns that element. */
+        public int pop() {
+            if(s2.isEmpty()){
+                while (!s1.empty()){
+                    s2.push(s1.pop());
+                }
+            }
+            return s2.pop();
+        }
 
-    /** Removes the element from in front of queue and returns that element. */
-    public int pop() {
-        return queue.poll();
-    }
+        /** Get the front element. */
+        public int peek() {
+            if(s2.isEmpty()){
+                while (!s1.empty()){
+                    s2.push(s1.pop());
+                }
+            }
+            return s2.peek();
+        }
 
-    /** Get the front element. */
-    public int peek() {
-        return queue.peek();
-    }
-
-    /** Returns whether the queue is empty. */
-    public boolean empty() {
-        return queue.size() == 0;
-    }
+        /** Returns whether the queue is empty. */
+        public boolean empty() {
+            return s2.isEmpty()&&s1.isEmpty();
+        }
 }
